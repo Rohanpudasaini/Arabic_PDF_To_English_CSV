@@ -1,0 +1,6 @@
+sudo apt install tesseract-ocr-ara
+sudo apt install poppler-utils
+
+pip install googletrans==4.0.0-rc1
+
+
