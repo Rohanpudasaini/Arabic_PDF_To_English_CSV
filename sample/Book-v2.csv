@@ -2,3 +2,13 @@ Colum_ID,0,1,2,3,4,5,5a,5b,6,7,8,9,10,11,12,13,14,15
 AR,هام وعاجل,تواريخ,رقم,بلدية نمار / حي الحزم,هبوط ترنش خدمات,وصف الموقع,ارتفاع,الطول,,نوع الخدمة,إسم الشارع,درجة الأهمية,اسم المقاول,ملاحظات الزيارة الميدانية,تشوه بصري,ملاحظات المهندس المشرف / المراقب,المراقب الميداني,رمز المستخدم
 EN,Priority,Date,ID,Municipality / Neighborhood,Neighborhood,Site location,Latitude,Longitude,Number,Service type,Street name,Priority,Contractor,Site visit remarks,Visual distortion,Supervising Engineer remarks,Site supervisor,User code
 Content,Important and urgent,26-12-1442 ,421206568316,Namar municipality / AlHazm neighborhood,,,24.5471405877028,46.6476383635795,,Roads,Hamza Ibn Abdulmotaleb God bless him,moderate,,,,"Based on specialisation, you are the owners",The reports of your service,9003797
+
+AR,هام وعاجل,26-12-1442,421206568332 ,بلدية نمار / حي الحزم,هبوط ترنش خدمات,وصف الموقع,24.54680871437081,46.64805711617913,438616,البلدية,شارع حمزه بن عبد المطلب رضي الله عنه,عادي,"اسم المقاول
+","ملاحظات الزيارة الميدانية
+",أمخالفة تشوه بصري,الشارع تابع لكم حسب الاختصاص,بلاغات_خدمتكم,9003797
+EN,Important and urgent,26-12-1442,421206568332 ,Nammar municipality / Al -Hazm neighborhood,Semitism of services,site location,24.54680871437081,46.64805711617913,438616,Municipal,"Hamza bin Abdul Muttalib Street, may God be pleased with him",Normal,The name of the contractor,Field visit notes,A violation of visual distortion,The street continues for you according to the specialty,Reports of your service,9003797
+
+AR,هام وعاجل التاريغ,26-12-1442,421206568360 ,بلدية نمار / حي الحزم,هبوط ترنش خدمات,وصف الموقع,24.545820093369244,46.64774158414652,438636,البلدية,شارع حمزه بن عبد المطلب رضي الله عنه,عادي,"اسم المقاول
+","ملاحظات الزيارة الميدانية
+",أمخالفة تشوه بصري,الموقع تابع لكم حسب الاختصاص,بلاغات_خدمتكم,9003797
+EN,Important and urgent,26-12-1442,421206568360 ,Nammar municipality / Al -Hazm neighborhood,Semitism of services,site location,24.545820093369244,46.64774158414652,438636,Municipal,"Hamza bin Abdul Muttalib Street, may God be pleased with him",Normal,The name of the contractor,Field visit notes,A violation of visual distortion,The site follows you according to the jurisdiction,Reports of your service,9003797

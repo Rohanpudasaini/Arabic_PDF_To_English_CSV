@@ -95,6 +95,8 @@ for items in ls2:
             ['EN', requirement.get_trans(zero1), one, two, requirement.get_trans(three), requirement.get_trans(four), 'site location', five_a, five_b, six, requirement.get_trans(seven), requirement.get_trans(eight), 
             requirement.get_trans(nine), requirement.get_trans(ten), requirement.get_trans(eleven), requirement.get_trans(twelve), requirement.get_trans(thirteen), requirement.get_trans(fourteen), fifteen]
         ] #apped the translated text in csv.
+        lst2 = ['']
+        requirement.append_csv(lst2)
         requirement.append_csv(lst_to_append1)
         requirement.append_csv(lst_to_append)
         requirement.append_txt(items)
