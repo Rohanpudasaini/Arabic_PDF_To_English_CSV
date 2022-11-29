@@ -86,18 +86,25 @@ for items in ls2:
             for item in matches5:
                 fifteen = item.group(0)
         t.close()
-        lst_to_append1 = [
-            ['AR', zero1, one, two, three, four, 'وصف الموقع', five_a, five_b, six, seven, eight, 
-            nine, ten, eleven, twelve, thirteen, fourteen, fifteen]
-        ] #append the arabic text in csv.
+        # lst_to_append1 = [
+        #     ['AR', zero1, one, two, three, four, 'وصف الموقع', five_a, five_b, six, seven, eight, 
+        #     nine, ten, eleven, twelve, thirteen, fourteen, fifteen]
+        # ] #append the arabic text in csv.
 
         lst_to_append = [
-            ['EN', requirement.get_trans(zero1), one, two, requirement.get_trans(three), requirement.get_trans(four), 'site location', five_a, five_b, six, requirement.get_trans(seven), requirement.get_trans(eight), 
-            requirement.get_trans(nine), requirement.get_trans(ten), requirement.get_trans(eleven), requirement.get_trans(twelve), requirement.get_trans(thirteen), requirement.get_trans(fourteen), fifteen]
-        ] #apped the translated text in csv.
-        lst2 = ['']
-        requirement.append_csv(lst2)
-        requirement.append_csv(lst_to_append1)
+            ['Content',zero1, requirement.get_trans(zero1), one, two, three, requirement.get_trans(three)
+            , four, requirement.get_trans(four), 'وصف الموقع','site location', five_a, five_b, six, 
+            seven, requirement.get_trans(seven), eight, requirement.get_trans(eight), nine, requirement.get_trans(nine), 
+            ten, requirement.get_trans(ten), eleven, requirement.get_trans(eleven), twelve, requirement.get_trans(twelve), 
+            thirteen, requirement.get_trans(thirteen), fourteen, requirement.get_trans(fourteen), fifteen]
+        ] #append the translated text in csv.
+        
+        # lst2 = [
+        #     ['','','','','','','','','','','','','','','','','','']
+        
+        # ]
+        # requirement.append_csv(lst2)
+        # requirement.append_csv(lst_to_append1)
         requirement.append_csv(lst_to_append)
         requirement.append_txt(items)
         os.chdir(f"{location_documents}")
