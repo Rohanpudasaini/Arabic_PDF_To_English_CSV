@@ -3,7 +3,8 @@ import googletrans
 import time
 import csv
 
-
+location_documents = r"/home/r0h8n/Desktop/Test/sample/Documents"
+home_locations = r"/home/r0h8n/Desktop/Test/sample"
 trans = googletrans.Translator()
 dirs = []
 
@@ -12,15 +13,15 @@ def get_trans(a):
     return b.text
 
 def run_command(name_pdf):
-    os.chdir(r"/home/r0h8n/Desktop/Test/sample")
-    os.system(fr"pdftoppm -jpeg ~/Desktop/Test/sample/Documents/{name_pdf} new12")
+    os.chdir(f"{home_locations}")
+    os.system(fr"pdftoppm -jpeg {location_documents}/{name_pdf} new12")
     time.sleep(1)
     os.system(r"tesseract new12-1.jpg txt23 -l ara --dpi 600")
     time.sleep(1)
     os.system(r"tesseract new12-1.jpg txt23_eng -l eng --dpi 600")
 
 def append_csv(rown):
-    os.chdir(r"/home/r0h8n/Desktop/Test/sample")
+    os.chdir(f"{home_locations}")
     with open("Book-v2.csv", "a+") as file_csv:
         writer = csv.writer(file_csv)
         writer.writerows(rown)
@@ -30,7 +31,7 @@ def append_csv(rown):
 # append_csv()
 
 def check_dir(fl_name):
-    os.chdir("/home/r0h8n/Desktop/Test/sample/Documents")
+    os.chdir(f"{location_documents}")
     with open("list.txt", "r") as tx:
         for line in tx:
             dirs.append(line[:-1])
@@ -51,7 +52,7 @@ def check_dir(fl_name):
             return False
 
 def append_txt(name):
-    os.chdir("/home/r0h8n/Desktop/Test/sample/Documents")
+    os.chdir(f"{location_documents}")
     with open("list.txt", "a") as txe:
         txe.write(f"\n{name}")
 
