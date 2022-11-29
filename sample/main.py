@@ -4,6 +4,7 @@ import googletrans
 import requirement
 
 location_documents = r"/home/r0h8n/Desktop/Test/sample/Documents"
+# change this to location of folder where pdfs are. (i.e usually inside /Documents)
 ls2 = []
 os.chdir("Documents/")
 l = os.listdir()
@@ -12,11 +13,12 @@ for ls in l:
     if a[1] == ".pdf":
         a = "".join(a)
         ls2.append(a)
-        # requirement.check_dir(a)
+    #find all pdfs inside the folder.        
 for items in ls2:    
-    if requirement.check_dir(items) == False:    
+    if requirement.check_dir(items) == False: #check if the pdf file is already translated and appended to csv   
+        #call check_dir function in requirement.py
         i = 1
-        with open("txt23.txt", "r") as f:
+        with open("txt23.txt", "r") as f: # check for known arabic string format of the pdf.
             for line in f:
                 if "نوع الخدمة" in line:
                     line = line.split()
@@ -56,7 +58,7 @@ for items in ls2:
                 i+=1
             four = "هبوط ترنش خدمات"
         f.close()
-        with open("txt23_eng.txt", "r") as t:
+        with open("txt23_eng.txt", "r") as t: # extract numbers and numeric values using regular expression.
             cont = t.read()
             patt1 = re.compile(r"\d{2}-\d{2}-\d{4}")
             matches = patt1.finditer(cont)
@@ -84,10 +86,16 @@ for items in ls2:
             for item in matches5:
                 fifteen = item.group(0)
         t.close()
+        lst_to_append1 = [
+            ['AR', zero1, one, two, three, four, 'وصف الموقع', five_a, five_b, six, seven, eight, 
+            nine, ten, eleven, twelve, thirteen, fourteen, fifteen]
+        ] #append the arabic text in csv.
+
         lst_to_append = [
-            ['Content', requirement.get_trans(zero1), one, two, requirement.get_trans(three), requirement.get_trans(four), 'site location', five_a, five_b, six, requirement.get_trans(seven), requirement.get_trans(eight), 
+            ['EN', requirement.get_trans(zero1), one, two, requirement.get_trans(three), requirement.get_trans(four), 'site location', five_a, five_b, six, requirement.get_trans(seven), requirement.get_trans(eight), 
             requirement.get_trans(nine), requirement.get_trans(ten), requirement.get_trans(eleven), requirement.get_trans(twelve), requirement.get_trans(thirteen), requirement.get_trans(fourteen), fifteen]
-        ]
+        ] #apped the translated text in csv.
+        requirement.append_csv(lst_to_append1)
         requirement.append_csv(lst_to_append)
         requirement.append_txt(items)
         os.chdir(f"{location_documents}")
