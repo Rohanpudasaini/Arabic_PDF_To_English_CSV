@@ -11,5 +11,5 @@ Final product of the project.
 
 ## What Do this Script DO?
 This script use [***poppler-utils***](https://pypi.org/project/poppler-utils/) to convert a pdf into image and
-after that use tesseract-ocr and arabic tesdata to extract the text.`we run the ocr 2 times as we arabic ocr can accurately extract numeric values.`
+after that use tesseract-ocr and arabic tesdata to extract the text.`we run the ocr 2 times as the arabic ocr can't accurately extract numeric values.`
 Finally we use python`s inbuild library csv to append the csv and also write name of extracted pdfs into a text file for future refrence to reduce redudency.
