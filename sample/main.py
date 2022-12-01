@@ -6,7 +6,7 @@ import requirement
 location_documents = r"/home/r0h8n/Desktop/Test/sample/Documents"
 # change this to location of folder where pdfs are. (i.e usually inside /Documents)
 ls2 = []
-os.chdir("Documents/")
+requirement.change_name() # Remove spaces from pdf name.
 l = os.listdir()
 for ls in l:
     a = os.path.splitext(ls)
